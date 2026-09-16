@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BookNook - responsive online bookstore UI/UX internship project">
+  <title>BookNook — Bookstore UX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <div id="onboarding" class="onboarding hidden">
+    <div class="onboard-card">
+      <div class="brand-mark large">BN</div>
+      <p class="eyebrow">WELCOME TO BOOKNOOK</p>
+      <h1>Find your next<br><span>favorite story.</span></h1>
+      <p class="muted">A cozy, simple bookstore experience for discovering books, saving reads, and checking out in a few taps.</p>
+      <div class="onboard-features">
+        <div><b>⌕</b><span>Smart discovery</span></div>
+        <div><b>♡</b><span>Reading lists</span></div>
+        <div><b>✓</b><span>Easy checkout</span></div>
+      </div>
+      <button class="btn primary full" data-action="start">Start exploring</button>
+      <button class="text-btn full" data-action="skip">Skip intro</button>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#" data-page="home" aria-label="BookNook home">
+      <div class="brand-mark">BN</div>
+      <div><strong>BookNook</strong><small>stories worth keeping</small></div>
+    </a>
+
+    <div class="desktop-search">
+      <span>⌕</span>
+      <input id="globalSearch" type="search" placeholder="Search books, authors, genres..." aria-label="Search books">
+      <kbd>Ctrl K</kbd>
+    </div>
+
+    <nav class="top-actions" aria-label="Primary">
+      <button class="icon-btn" data-page="reading" title="Reading list">♡</button>
+      <button class="icon-btn cart-btn" data-page="cart" title="Cart">🛒<i id="cartCount">0</i></button>
+      <button class="avatar" data-page="profile" title="Profile">SM</button>
+    </nav>
+  </header>
+
+  <main class="app-shell">
+    <aside class="sidebar">
+      <p class="nav-label">DISCOVER</p>
+      <button class="side-link active" data-page="home">⌂ <span>Home</span></button>
+      <button class="side-link" data-page="categories">▦ <span>Categories</span></button>
+      <button class="side-link" data-page="books">▤ <span>All books</span></button>
+      <button class="side-link" data-page="authors">♧ <span>Authors</span></button>
+      <button class="side-link" data-page="reading">♡ <span>Reading list</span></button>
+      <p class="nav-label space-top">ACCOUNT</p>
+      <button class="side-link" data-page="cart">🛒 <span>Shopping cart</span><b class="nav-badge" id="sideCartCount">0</b></button>
+      <button class="side-link" data-page="profile">◉ <span>Profile</span></button>
+      <button class="side-link" data-page="login">⇥ <span>Login / Sign up</span></button>
+
+      <div class="sidebar-note">
+        <div>☀</div>
+        <strong>Need a little inspiration?</strong>
+        <p>Explore our hand-picked collections.</p>
+        <button class="btn soft" data-page="categories">Browse collections</button>
+      </div>
+    </aside>
+
+    <section id="view" class="view" tabindex="-1"></section>
+  </main>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <button data-page="home">⌂<span>Home</span></button>
+    <button data-page="categories">▦<span>Browse</span></button>
+    <button data-page="reading">♡<span>Saved</span></button>
+    <button data-page="cart">🛒<span>Cart</span></button>
+    <button data-page="profile">◉<span>Profile</span></button>
+  </nav>
+
+  <footer class="footer">
+    <div><strong>BookNook</strong><span> · Designed as a responsive bookstore UX case</span></div>
+    <div>© 2026 BookNook · Privacy · Help</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
