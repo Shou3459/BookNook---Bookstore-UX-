@@ -31,7 +31,6 @@
 ## How to run
 1. Extract the ZIP.
 2. Open `index.html` in Chrome/Edge/Firefox.
-3. No build tools or server are required.
 
 The project stores the demo cart and reading list in browser `localStorage`, so interactions persist after refresh.
 
